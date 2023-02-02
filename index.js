@@ -1,12 +1,10 @@
 var expect = chai.expect
-import {shuffle} from './Week6FinalProject.js'
-console.log(shuffle);
-
+//checking to see if a new instance of Deck class with shuffle function performed on it will indeed have 52 cards
 describe('shuffle', function() {
   it('should return an array of the same length', function() {
-    let deck = [{ suit: 'hearts', value: '2' }, { suit: 'diamonds', value: '3' }, { suit: 'clubs', value: '4' }, { suit: 'spades', value: '5' }];
-    let shuffledDeck = deck.shuffle();
+    let shuffledDeck = new Deck()
+    shuffledDeck.shuffle()
     console.log(shuffledDeck);
-    expect(shuffledDeck.length).to.equal(deck.length);
+    expect(shuffledDeck.deck.length).to.equal(52);
   });
 });
